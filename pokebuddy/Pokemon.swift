@@ -22,11 +22,12 @@ class Pokemon {
     private var _nextEvolutionId: String!
     private var _nextEvolutionLvl: String!
     private var _pokemonUrl: String!
+    private var _abilities: String!
     
     var nextEvolutionLvl: String {
         get {
             if _nextEvolutionLvl == nil {
-                _nextEvolutionLvl = "N/A"
+                _nextEvolutionLvl = ""
             }
             return _nextEvolutionLvl
         }
@@ -41,10 +42,19 @@ class Pokemon {
         return _nextEvolutionTxt
     }
     
+    var abilities: String {
+        
+        if _abilities == nil {
+            _abilities = ""
+        }
+        
+        return _abilities
+    }
+    
     var nextEvolutionId: String {
         
         if _nextEvolutionId == nil {
-            _nextEvolutionId = "N/A"
+            _nextEvolutionId = ""
         }
         return _nextEvolutionId
     }
@@ -52,42 +62,42 @@ class Pokemon {
     var description: String {
         
         if _description == nil {
-            _description = "N/A"
+            _description = ""
         }
         return _description
     }
     
     var type: String {
         if _type == nil {
-            _type = "N/A"
+            _type = ""
         }
         return _type
     }
     
     var defense: String {
         if _defense == nil {
-            _defense = "N/A"
+            _defense = ""
         }
         return _defense
     }
     
     var height: String {
         if _height == nil {
-            _height = "N/A"
+            _height = ""
         }
         return _height
     }
     
     var weight: String {
         if _weight == nil {
-            _weight = "N/A"
+            _weight = ""
         }
         return _weight
     }
     
     var attack: String {
         if _attack == nil {
-            _attack = "N/A"
+            _attack = ""
         }
         return _attack
     }
@@ -181,6 +191,27 @@ class Pokemon {
                     self._description = ""
                 }
                 
+                if let abilities = dict["abilities"] as? [Dictionary<String, AnyObject>] where abilities.count > 0 {
+                    
+                    if let ability = abilities[0]["name"] as? String {
+                        self._abilities = "1 - " + ability.capitalizedString + "\n"
+                    }
+                    
+                    if abilities.count > 1 {
+                        
+                        for x in 1...abilities.count - 1 {
+                            if let name = abilities[x]["name"] {
+                                self._abilities! += "\(x + 1) - \(name.capitalizedString)\n"
+                            }
+                        }
+                        
+                        
+                        
+                    }
+                    print(self._abilities)
+                } else {
+                    self._abilities = ""
+                }
                 
                 if let evolutions = dict["evolutions"] as? [Dictionary<String,AnyObject>] where evolutions.count > 0{
                     
@@ -202,9 +233,10 @@ class Pokemon {
                                     self._nextEvolutionLvl = "\(lvl)"
                                 }
                                 
+                                
                                 print(self._nextEvolutionId)
                                 print(self._nextEvolutionTxt)
-                                print(self._nextEvolutionLvl)
+                                print("\(self._nextEvolutionLvl)")
                                 
                             }
                         }

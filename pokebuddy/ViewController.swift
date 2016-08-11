@@ -26,6 +26,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.Done
+        let searchBarText = searchBar.valueForKey("searchField") as? UITextField
+        
+        searchBarText?.textColor = UIColor.blueColor()
         
         initAudio()
         parsePokemonCSV()

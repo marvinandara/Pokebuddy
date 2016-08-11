@@ -12,6 +12,7 @@ class PokemonDetailVC: UIViewController {
     
     var pokemon: Pokemon!
 
+    @IBOutlet weak var lblSegmentController: UISegmentedControl!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var descriptionLbl: UILabel!
@@ -27,7 +28,7 @@ class PokemonDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        lblSegmentController.enabled = false
         pokemon.downloadPokemonDetails { () -> () in
             //this will be called after download is complete
             
@@ -73,7 +74,7 @@ class PokemonDetailVC: UIViewController {
         }
         
         
-        
+        lblSegmentController.enabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,5 +89,20 @@ class PokemonDetailVC: UIViewController {
         
     }
 
+    @IBAction func segmentControllerPressed(sender: AnyObject) {
+        
+        if lblSegmentController.selectedSegmentIndex == 0 {
+            
+            descriptionLbl.text = pokemon.description
+            
+        }
+        else if lblSegmentController.selectedSegmentIndex == 1 {
+            
+            descriptionLbl.text = pokemon.abilities
+            
+        }
+
+        
+    }
 
 }

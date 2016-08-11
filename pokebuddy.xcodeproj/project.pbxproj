@@ -22,6 +22,11 @@
 		77A57E9E1D512172000734B4 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77A57E9D1D512172000734B4 /* pokemon.csv */; };
 		77A57EA11D5122E9000734B4 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A57EA01D5122E9000734B4 /* Pokemon.swift */; };
 		77A57EA41D512E05000734B4 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A57EA31D512E05000734B4 /* PokeCell.swift */; };
+		77FFB9601D57F64400F03639 /* abilities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77FFB95B1D57F64400F03639 /* abilities.csv */; };
+		77FFB9611D57F64500F03639 /* ability_pokes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77FFB95C1D57F64400F03639 /* ability_pokes.csv */; };
+		77FFB9621D57F64500F03639 /* evolutions.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77FFB95D1D57F64400F03639 /* evolutions.csv */; };
+		77FFB9631D57F64500F03639 /* poke_types.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77FFB95E1D57F64400F03639 /* poke_types.csv */; };
+		77FFB9641D57F64500F03639 /* pokedex_descriptions.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77FFB95F1D57F64400F03639 /* pokedex_descriptions.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		77A57E9D1D512172000734B4 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		77A57EA01D5122E9000734B4 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		77A57EA31D512E05000734B4 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		77FFB95B1D57F64400F03639 /* abilities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = abilities.csv; sourceTree = "<group>"; };
+		77FFB95C1D57F64400F03639 /* ability_pokes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ability_pokes.csv; sourceTree = "<group>"; };
+		77FFB95D1D57F64400F03639 /* evolutions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = evolutions.csv; sourceTree = "<group>"; };
+		77FFB95E1D57F64400F03639 /* poke_types.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = poke_types.csv; sourceTree = "<group>"; };
+		77FFB95F1D57F64400F03639 /* pokedex_descriptions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokedex_descriptions.csv; sourceTree = "<group>"; };
 		9E55D125B73EF4A3595CC261 /* Pods-pokebuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokebuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-pokebuddy/Pods-pokebuddy.release.xcconfig"; sourceTree = "<group>"; };
 		D10D88669719A77894F49E36 /* Pods-pokebuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokebuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pokebuddy/Pods-pokebuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		D84978CE2C3B2B4CA74F6974 /* Pods_pokebuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pokebuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +97,11 @@
 		773E74691D52B73B0028B024 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				77FFB95B1D57F64400F03639 /* abilities.csv */,
+				77FFB95C1D57F64400F03639 /* ability_pokes.csv */,
+				77FFB95D1D57F64400F03639 /* evolutions.csv */,
+				77FFB95E1D57F64400F03639 /* poke_types.csv */,
+				77FFB95F1D57F64400F03639 /* pokedex_descriptions.csv */,
 				778D01BA1D52C13400BC59F5 /* music.mp3 */,
 				778D01B81D52BDEC00BC59F5 /* pokemon.ttf */,
 				77A57E9D1D512172000734B4 /* pokemon.csv */,
@@ -218,10 +233,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				778D01B91D52BDEC00BC59F5 /* pokemon.ttf in Resources */,
+				77FFB9631D57F64500F03639 /* poke_types.csv in Resources */,
 				77A57E961D511E54000734B4 /* LaunchScreen.storyboard in Resources */,
+				77FFB9611D57F64500F03639 /* ability_pokes.csv in Resources */,
 				778D01BB1D52C13400BC59F5 /* music.mp3 in Resources */,
+				77FFB9601D57F64400F03639 /* abilities.csv in Resources */,
 				77A57E931D511E54000734B4 /* Assets.xcassets in Resources */,
 				77A57E9E1D512172000734B4 /* pokemon.csv in Resources */,
+				77FFB9621D57F64500F03639 /* evolutions.csv in Resources */,
+				77FFB9641D57F64500F03639 /* pokedex_descriptions.csv in Resources */,
 				77A57E8E1D511E54000734B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
