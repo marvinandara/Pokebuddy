@@ -1,9 +1,9 @@
 //
 //  Pokemon.swift
-//  pokedex-by-devslopes
+//  pokebuddy
 //
-//  Created by Mark Price on 8/14/15.
-//  Copyright © 2015 devslopes. All rights reserved.
+//  Created by Marvin Andara on 8/2/16.
+//  Copyright © 2016 MarvinAndara. All rights reserved.
 //
 
 import Foundation
